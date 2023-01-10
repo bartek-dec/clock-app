@@ -1,6 +1,10 @@
+import {Advice} from './components';
+
 function App() {
     return (
-        <h1>app</h1>
+        <main className='background'>
+            <Advice/>
+        </main>
     );
 }
 

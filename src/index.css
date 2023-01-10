@@ -8,6 +8,7 @@
 
     --transition: 0.3s all linear;
     --border-radius: 5rem;
+    --max-width: 1120px;
 }
 
 *, ::before, ::after {
@@ -25,3 +26,107 @@ body {
     font-size: 1.8rem;
     color: var(--dark-grey);
 }
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/*==============*/
+/*= Main
+/*==============*/
+.background {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/mobile/bg-image-daytime.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    padding: 4rem 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .background {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/tablet/bg-image-daytime.jpg");
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .background {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/desktop/bg-image-daytime.jpg");
+    }
+}
+
+/*==============*/
+/*= Main
+/*==============*/
+.advice {
+    min-height: 30vh;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.advice-container {
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.advice-text {
+    font-size: 1.4rem;
+    color: var(--white);
+    line-height: 2;
+    margin-bottom: 1.5rem;
+}
+
+.advice-author {
+    font-size: 1.4rem;
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+.refresh-btn {
+    position: absolute;
+    top: 0;
+    right: -1rem;
+    transform: translateX(100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    border: none;
+    color: var(--light-grey);
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.refresh-btn:hover {
+    color: var(--white);
+}
+
+@media screen and (min-width: 768px) {
+    .advice-text {
+        font-size: 1.8rem;
+    }
+
+    .advice-author {
+        font-size: 1.8rem;
+    }
+
+    .refresh-btn {
+        top: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
