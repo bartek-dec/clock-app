@@ -5,7 +5,8 @@
     --white: rgb(255, 255, 255);
     --dark-grey: rgb(48, 48, 48);
     --grey: rgba(0, 0, 0, 0.5);
-    --light-grey: rgba(255, 255, 255, 0.65);
+    --light-grey: rgb(190, 190, 190);
+    --very-light-grey: rgba(255, 255, 255, 0.75);
 
     --transition: 0.3s all linear;
     --border-radius: 5rem;
@@ -43,14 +44,11 @@ img {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
-    padding: 0 2rem;
 }
 
 @media screen and (min-width: 768px) {
     .background {
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/tablet/bg-image-daytime.jpg");
-        padding: 0 6rem;
     }
 }
 
@@ -61,17 +59,21 @@ img {
 }
 
 /*==============*/
-/*= Main
+/*= Advice
 /*==============*/
 .advice {
-    min-height: 30vh;
+    height: 30vh;
+    /*height: 0;*/
+    /*overflow: hidden;*/
     width: 100%;
     max-width: var(--max-width);
-    padding-top: 4rem;
+    padding: 0 2rem;
     margin: 0 auto;
+    transition: height 0.3s linear;
 }
 
 .advice-container {
+    padding-top: 4rem;
     width: 90%;
     max-width: 500px;
     position: relative;
@@ -90,7 +92,7 @@ img {
 
 .refresh-btn {
     position: absolute;
-    top: 0;
+    top: 4rem;
     right: -1rem;
     transform: translateX(100%);
 
@@ -100,7 +102,7 @@ img {
 
     background-color: transparent;
     border: none;
-    color: var(--light-grey);
+    color: var(--very-light-grey);
     font-size: 2.5rem;
     cursor: pointer;
     transition: var(--transition);
@@ -112,7 +114,15 @@ img {
 
 @media screen and (min-width: 768px) {
     .advice {
+        padding: 0;
+        height: 45vh;
+        /*height: 0;*/
+        /*overflow: hidden;*/
+    }
+
+    .advice-container {
         padding-top: 6rem;
+        padding-left: 6rem;
     }
 
     .advice-text {
@@ -124,13 +134,23 @@ img {
     }
 
     .refresh-btn {
-        top: 1rem;
+        top: 7rem;
     }
 }
 
 @media screen and (min-width: 992px) {
     .advice {
+        height: 40vh;
+        /*height: 0;*/
+        /*overflow: hidden;*/
+    }
+
+    .advice-container {
         padding-top: 4rem;
+    }
+
+    .refresh-btn {
+        top: 5rem;
     }
 }
 
@@ -140,9 +160,12 @@ img {
 .hero {
     min-height: 70vh;
     padding-bottom: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
+    transition: height 0.3s linear;
 
     display: flex;
     flex-direction: column;
@@ -241,7 +264,10 @@ img {
 
 @media screen and (min-width: 768px) {
     .hero {
+        min-height: 55vh;
         padding-bottom: 6rem;
+        padding-left: 6rem;
+        padding-right: 6rem;
     }
 
     .time {
@@ -279,6 +305,7 @@ img {
 
 @media screen and (min-width: 992px) {
     .hero {
+        min-height: 60vh;
         padding-bottom: 8rem;
         flex-direction: row;
         justify-content: space-between;
@@ -303,17 +330,111 @@ img {
     }
 }
 
+/*==============*/
+/*= More Info
+/*==============*/
+.more-info {
+    /*height: 30vh;*/
+    height: 0;
+    overflow: hidden;
+    background-color: var(--light-grey);
+    color: var(--dark-grey);
+    transition: height 0.3s linear;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.more-info-container {
+    width: 100%;
+    max-width: var(--max-width);
+    height: 100%;
+    padding: 5rem 2rem;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
 
+.info-heading {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
 
+.info-text {
+    font-size: 2rem;
+}
 
+@media screen and (min-width: 768px) {
+    .more-info {
+        /*height: 45vh;*/
+        height: 0;
+        overflow: hidden;
+    }
 
+    .more-info-container {
+        padding: 10rem 6rem;
 
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 3rem 5rem;
+    }
 
+    .info {
+        display: block;
+    }
 
+    .day {
+        order: 1;
+    }
+
+    .year {
+        order: 2;
+    }
+
+    .week {
+        order: 3;
+    }
+
+    .info-heading {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+
+    .info-text {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .more-info-container {
+        padding: 8rem 6rem;
+        gap: 4rem 5rem;
+    }
+    .more-info {
+        /*height: 40vh;*/
+        height: 0;
+        overflow: hidden;
+    }
+
+    .info-heading {
+        font-size: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .info-text {
+        font-size: 5.6rem;
+    }
+}
 
 
 
