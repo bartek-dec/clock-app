@@ -1,9 +1,10 @@
 import sun from '../images/desktop/icon-sun.svg';
 import moon from '../images/desktop/icon-moon.svg';
-import arrowDown from '../images/desktop/icon-arrow-down.svg';
-import arrowUp from '../images/desktop/icon-arrow-up.svg';
+import {useSelector} from "react-redux";
+import {GoChevronDown} from 'react-icons/go';
 
 const Hero = ({handleClick}) => {
+    const {isClosed} = useSelector((state) => state.moreBtn);
 
     return (
         <section className='hero'>
@@ -16,9 +17,9 @@ const Hero = ({handleClick}) => {
                 <h3 className='location'>in london, uk</h3>
             </div>
             <div className='btn-container'>
-                <p className='btn-container-text'>more</p>
-                <button type='button' className='more-btn' onClick={handleClick}>
-                    <img src={arrowDown} alt='arrow' className='more-btn-img'/>
+                <p className='btn-container-text'>{isClosed ? 'more' : 'less'}</p>
+                <button type='button' className={isClosed ? 'more-btn' : 'more-btn up'} onClick={handleClick}>
+                    <GoChevronDown/>
                 </button>
             </div>
         </section>

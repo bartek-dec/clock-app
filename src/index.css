@@ -258,6 +258,8 @@ img {
     width: 3rem;
     height: 3rem;
     transition: var(--transition);
+    font-size: 2rem;
+    color: var(--white);
 
     display: flex;
     justify-content: center;
@@ -268,13 +270,8 @@ img {
     background-color: var(--grey);
 }
 
-.more-btn:focus {
+.up {
     transform: rotate(180deg);
-}
-
-.more-btn-img {
-    width: 1rem;
-    height: 0.6rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -310,11 +307,7 @@ img {
     .more-btn {
         width: 4rem;
         height: 4rem;
-    }
-
-    .more-btn-img {
-        width: 1.4rem;
-        height: 0.9rem;
+        font-size: 2.5rem;
     }
 }
 
