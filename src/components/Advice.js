@@ -2,6 +2,7 @@ import React from 'react';
 import {TbRefresh} from 'react-icons/tb';
 
 const Advice = () => {
+
     return (
         <section className='advice'>
             <div className='advice-container'>

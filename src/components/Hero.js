@@ -1,9 +1,10 @@
-import React from 'react';
 import sun from '../images/desktop/icon-sun.svg';
 import moon from '../images/desktop/icon-moon.svg';
-import arrow from '../images/desktop/icon-arrow-down.svg';
+import arrowDown from '../images/desktop/icon-arrow-down.svg';
+import arrowUp from '../images/desktop/icon-arrow-up.svg';
 
-const Hero = () => {
+const Hero = ({handleClick}) => {
+
     return (
         <section className='hero'>
             <div className='hero-container'>
@@ -16,8 +17,8 @@ const Hero = () => {
             </div>
             <div className='btn-container'>
                 <p className='btn-container-text'>more</p>
-                <button type='button' className='more-btn'>
-                    <img src={arrow} alt='arrow' className='more-btn-img'/>
+                <button type='button' className='more-btn' onClick={handleClick}>
+                    <img src={arrowDown} alt='arrow' className='more-btn-img'/>
                 </button>
             </div>
         </section>

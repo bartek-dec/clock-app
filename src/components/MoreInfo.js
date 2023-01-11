@@ -1,6 +1,7 @@
 import React from 'react';
 
 const MoreInfo = () => {
+
     return (
         <section className='more-info'>
             <div className='more-info-container'>

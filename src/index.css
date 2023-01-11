@@ -39,11 +39,13 @@ img {
 /*= Main
 /*==============*/
 .background {
-    min-height: 100vh;
+    height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/mobile/bg-image-daytime.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -58,24 +60,43 @@ img {
     }
 }
 
+.wrapper {
+    width: 100%;
+    transition: var(--transition)
+}
+
+.transform {
+    transition: var(--transition);
+    transform: translateY(-30vh);
+}
+
+@media screen and (min-width: 768px) {
+    .transform {
+        transform: translateY(-45vh);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .transform {
+        transform: translateY(-40vh);
+    }
+}
+
 /*==============*/
 /*= Advice
 /*==============*/
 .advice {
     height: 30vh;
-    /*height: 0;*/
-    /*overflow: hidden;*/
-    width: 100%;
     max-width: var(--max-width);
     padding: 0 2rem;
     margin: 0 auto;
-    transition: height 0.3s linear;
+    transition: var(--transition);
 }
 
 .advice-container {
     padding-top: 4rem;
     width: 90%;
-    max-width: 500px;
+    max-width: 560px;
     position: relative;
 }
 
@@ -116,8 +137,6 @@ img {
     .advice {
         padding: 0;
         height: 45vh;
-        /*height: 0;*/
-        /*overflow: hidden;*/
     }
 
     .advice-container {
@@ -141,8 +160,6 @@ img {
 @media screen and (min-width: 992px) {
     .advice {
         height: 40vh;
-        /*height: 0;*/
-        /*overflow: hidden;*/
     }
 
     .advice-container {
@@ -162,10 +179,8 @@ img {
     padding-bottom: 4rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
-    transition: height 0.3s linear;
 
     display: flex;
     flex-direction: column;
@@ -334,12 +349,9 @@ img {
 /*= More Info
 /*==============*/
 .more-info {
-    /*height: 30vh;*/
-    height: 0;
-    overflow: hidden;
+    height: 30vh;
     background-color: var(--light-grey);
     color: var(--dark-grey);
-    transition: height 0.3s linear;
 
     display: flex;
     justify-content: center;
@@ -350,7 +362,7 @@ img {
     width: 100%;
     max-width: var(--max-width);
     height: 100%;
-    padding: 5rem 2rem;
+    padding: 4rem 2rem;
 
     display: flex;
     flex-direction: column;
@@ -376,9 +388,7 @@ img {
 
 @media screen and (min-width: 768px) {
     .more-info {
-        /*height: 45vh;*/
-        height: 0;
-        overflow: hidden;
+        height: 45vh;
     }
 
     .more-info-container {
@@ -420,10 +430,9 @@ img {
         padding: 8rem 6rem;
         gap: 4rem 5rem;
     }
+
     .more-info {
-        /*height: 40vh;*/
-        height: 0;
-        overflow: hidden;
+        height: 40vh;
     }
 
     .info-heading {
