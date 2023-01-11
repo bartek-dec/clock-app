@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {TbRefresh} from 'react-icons/tb';
 import {useSelector, useDispatch} from "react-redux";
-import {getQuote} from "../features/refresh/refresh";
+import {getQuote} from "../features/refresh/refreshSlice";
 
 const Advice = () => {
     const {content, author, error} = useSelector((state) => state.refresh);
