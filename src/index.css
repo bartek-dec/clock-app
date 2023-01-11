@@ -4,6 +4,7 @@
     --black: rgb(0, 0, 0);
     --white: rgb(255, 255, 255);
     --dark-grey: rgb(48, 48, 48);
+    --grey: rgba(0, 0, 0, 0.5);
     --light-grey: rgba(255, 255, 255, 0.65);
 
     --transition: 0.3s all linear;
@@ -24,7 +25,8 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     font-size: 1.8rem;
-    color: var(--dark-grey);
+    line-height: 1;
+    color: var(--white);
 }
 
 img {
@@ -36,22 +38,23 @@ img {
 /*= Main
 /*==============*/
 .background {
-    height: 100vh;
+    min-height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/mobile/bg-image-daytime.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
-    padding: 4rem 2rem;
+    padding: 0 2rem;
 }
 
 @media screen and (min-width: 768px) {
     .background {
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/tablet/bg-image-daytime.jpg");
+        padding: 0 6rem;
     }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 992px) {
     .background {
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/desktop/bg-image-daytime.jpg");
     }
@@ -64,6 +67,7 @@ img {
     min-height: 30vh;
     width: 100%;
     max-width: var(--max-width);
+    padding-top: 4rem;
     margin: 0 auto;
 }
 
@@ -75,14 +79,12 @@ img {
 
 .advice-text {
     font-size: 1.4rem;
-    color: var(--white);
     line-height: 2;
     margin-bottom: 1.5rem;
 }
 
 .advice-author {
     font-size: 1.4rem;
-    color: var(--white);
     letter-spacing: 1px;
 }
 
@@ -109,6 +111,10 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+    .advice {
+        padding-top: 6rem;
+    }
+
     .advice-text {
         font-size: 1.8rem;
     }
@@ -121,6 +127,187 @@ img {
         top: 1rem;
     }
 }
+
+@media screen and (min-width: 992px) {
+    .advice {
+        padding-top: 4rem;
+    }
+}
+
+/*==============*/
+/*= Hero
+/*==============*/
+.hero {
+    min-height: 70vh;
+    padding-bottom: 4rem;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.heading-container {
+    margin-bottom: 2rem;
+
+    display: flex;
+    align-items: center;
+    gap: 0 4rem;
+}
+
+.heading-img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.greeting {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.time {
+    font-size: 10rem;
+    margin-bottom: 2rem;
+}
+
+.time span {
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.location {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 4rem;
+}
+
+.btn-container-text {
+    color: var(--dark-grey);
+}
+
+.btn-container {
+    height: 4rem;
+    width: 12rem;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding-left: 2rem;
+    padding-right: 0.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-container-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--grey);
+}
+
+.more-btn {
+    border: none;
+    background-color: var(--dark-grey);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    transition: var(--transition);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.more-btn:hover {
+    background-color: var(--grey);
+}
+
+.more-btn:focus {
+    transform: rotate(180deg);
+}
+
+.more-btn-img {
+    width: 1rem;
+    height: 0.6rem;
+}
+
+@media screen and (min-width: 768px) {
+    .hero {
+        padding-bottom: 6rem;
+    }
+
+    .time {
+        font-size: 17.5rem;
+    }
+
+    .time span {
+        font-size: 1.8rem;
+    }
+
+    .location {
+        font-size: 1.8rem;
+    }
+
+    .btn-container {
+        height: 5.5rem;
+        width: 15rem;
+        padding-right: 1rem;
+    }
+
+    .btn-container-text {
+        font-size: 1.6rem;
+    }
+
+    .more-btn {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .more-btn-img {
+        width: 1.4rem;
+        height: 0.9rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .hero {
+        padding-bottom: 8rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .time {
+        font-size: 20rem;
+    }
+
+    .time span {
+        font-size: 2.4rem;
+    }
+
+    .location {
+        font-size: 2.4rem;
+        margin-bottom: 0;
+    }
+
+    .hero-container {
+        padding-bottom: 0;
+    }
+}
+
+
+
+
+
+
 
 
 
