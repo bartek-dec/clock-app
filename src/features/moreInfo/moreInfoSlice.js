@@ -1,7 +1,7 @@
 import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 import axios from "axios";
 
-const url = 'http://worldtimeapi.org/api/ip';
+const url = 'https://worldtimeapi.org/api/ip';
 
 const initialState = {
     timezone: '',
