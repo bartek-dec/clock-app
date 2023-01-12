@@ -48,15 +48,27 @@ img {
     overflow: hidden;
 }
 
+.night-background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/mobile/bg-image-nighttime.jpg");
+}
+
 @media screen and (min-width: 768px) {
     .background {
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/tablet/bg-image-daytime.jpg");
+    }
+
+    .night-background {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/tablet/bg-image-nighttime.jpg");
     }
 }
 
 @media screen and (min-width: 992px) {
     .background {
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/desktop/bg-image-daytime.jpg");
+    }
+
+    .night-background {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/desktop/bg-image-nighttime.jpg");
     }
 }
 
@@ -346,10 +358,16 @@ img {
     height: 30vh;
     background-color: var(--light-grey);
     color: var(--dark-grey);
+    transition: var(--transition);
 
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.night {
+    background-color: var(--black);
+    color: var(--white);
 }
 
 .more-info-container {

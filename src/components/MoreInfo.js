@@ -4,6 +4,7 @@ import {getTimeInfo} from "../features/moreInfo/moreInfoSlice";
 
 const MoreInfo = () => {
     const {timezone, dayOfYear, dayOfWeek, weekNum, error} = useSelector((state) => state.moreInfo);
+    const {daytime} = useSelector((state) => state.greeting);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -12,7 +13,7 @@ const MoreInfo = () => {
     }, []);
 
     return (
-        <section className='more-info'>
+        <section className={`more-info ${daytime}`}>
             <div className='more-info-container'>
                 <div className='info'>
                     <h3 className='info-heading zone'>current timezone</h3>
