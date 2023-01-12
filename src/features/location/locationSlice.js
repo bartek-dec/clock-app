@@ -1,7 +1,7 @@
 import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 import axios from "axios";
 
-const url = 'https://api.ipbase.com/v2/info?apikey=oDmz6CiEWhYM8V5ocmHjhpXR0pqi4T8ImwMz63Ju';
+const url = `https://api.ipbase.com/v2/info?apikey=${process.env.REACT_APP_API_KEY}`;
 
 const initialState = {
     city: '',
