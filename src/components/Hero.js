@@ -26,7 +26,7 @@ const Hero = ({handleClick}) => {
     setInterval(updateTime, 1000);
 
     useEffect(() => {
-        //dispatch(getLocation());
+        dispatch(getLocation());
         // eslint-disable-next-line
     }, []);
 
